@@ -1,6 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Spartan&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
     * {
       padding: 0;
@@ -23,7 +21,6 @@
 
     body {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: 'Spartan', sans-serif;
@@ -40,20 +37,20 @@
 
     .cont-description,
     .cont-hits {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
     }
 
 
     .title {
       font-weight: 700;
-      font-size: 1.8rem;
+      font-size: 2rem;
       color: hsl(300, 43%, 22%);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     .description {
       color: hsl(303, 10%, 53%);
-      margin-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
 
     .title,
@@ -64,24 +61,22 @@
     .description,
     .quote {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.9rem;
       line-height: 1.6;
     }
-
-    .hits ul {
-      list-style: none;
-      display: inline-flex;
+    .stars{
+      height: 20px;
+      width: 85px;
+      background-image: url("images/icon-star.svg");
+      background-repeat: space;
+      background-size: 15px auto;
       margin-bottom: 0.5rem;
-    }
-
-    .hits li {
-      padding-left: 0.5rem;
     }
 
     .hits strong {
       color: hsl(300, 43%, 22%);
       font-weight: bold;
-      font-size: 13px;
+      font-size: 0.9rem;
     }
 
     .cont-hits,
@@ -89,7 +84,7 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 1.2rem;
     }
 
     .hits {
@@ -128,13 +123,13 @@
 
     .name {
       font-weight: bold;
-      font-size: 13px;
+      font-size: 1rem;
       color: hsl(0, 0%, 100%);
       margin-bottom: 0.2rem;
     }
 
     .status {
-      font-size: 13px;
+      font-size: 1rem;
       color: hsl(333, 80%, 67%);
     }
 
@@ -154,7 +149,7 @@
 
       .cont-description,
       .cont-hits {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
       }
 
       .content {
@@ -163,15 +158,18 @@
       }
 
       .title {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         text-align: left;
-        width: 60%;
+        width: 65%;
+      }
+      .description{
+        font-size: 1.1rem;
+        margin: 0;
       }
 
       .description {
-        font-size: 15px;
         text-align: left;
-        width: 80%;
+        max-width: 80%;
       }
 
       .cont-hits,
@@ -179,9 +177,8 @@
         flex: 1;
       }
 
-      .hits,
       main {
-        width: 90vw;
+        max-width: 75rem;
       }
 
       .hits {
@@ -189,12 +186,7 @@
         flex-direction: row;
         justify-content: space-evenly;
       }
-
-      ul {
-        margin-bottom: 0;
-        align-self: center;
-      }
-
+   
       .cont-hits .hits:nth-child(2) {
         justify-self: center;
       }
@@ -219,23 +211,5 @@
         justify-self: flex-end;
         position: relative;
         top: 2rem;
-      }
-    }
-
-    @media (min-width:1200px) {
-      main {
-        width: 80vw;
-      }
-    }
-
-    @media (min-width:1500px) {
-      main {
-        width: 70vw;
-      }
-    }
-
-    @media (min-width:1700px) {
-      main {
-        width: 60vw;
       }
     }
